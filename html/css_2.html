@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Demo</title>
+</head>
+  <style>
+    .parent{
+       display: flex;
+       justify-content: space-between;
+       background-color: aqua;
+       padding: 20px;
+    }
+   .child{
+       /* display: flex;
+       justify-content: center; */
+       align-items: start;
+       width: 200px;
+       border-radius: 5px;
+       background-color: rgb(148, 138, 204);
+       text-align: center;
+       box-shadow:10px 10px 8px rgb(75, 69, 69);
+   }
+   .icon{
+       margin-top: 10px;
+       margin-bottom: 10px;
+       width: 40px;
+       height: 40px;
+       border-radius: 15px;
+   }
+   button{
+       background-color: rgb(194, 94, 94);
+       color: white;
+       padding: 10px 20px;
+       border-radius: 5px;
+       margin-bottom: 10px;
+       cursor: pointer;
+   }
+</style>
+</head>
+<body>
+<div class="parent">
+     <div id="item1"class = "child">
+       <img src="/png/1.png"  class="icon">
+         <h1>PROGRAM</h1>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nihil optio quo quos ex pariatur?</p>
+        <button><u>More</u></button>
+     </div>
+     <div id="item2"class = "child">
+       <img src="/png/2.png" class="icon">
+          <h1>RESULT</h1>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga voluptatum debitis natus. Ea, aut sunt.</p> 
+         <button><u>More</u></button>             
+     </div>
+     <div id="item3"class = "child">
+       <img src="/png/3.png" class="icon">
+       <h1>COACHING</h1>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga voluptatum debitis natus. Ea, aut sunt.</p>
+       <button><u>More</u></button>
+     </div>
+     <div id="item4"class = "child">
+       <img src="/png/4.png" class="icon">
+           <h1>EVENT</h1>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga voluptatum debitis natus. Ea, aut sunt.</p>
+         <button><u>More</u></button>
+     </div>
+</div>
+</body>
+</html>
