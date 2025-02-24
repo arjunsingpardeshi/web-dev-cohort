@@ -6,9 +6,8 @@ let starRating;
 function review_Star(str){
     starRating = str;
 }
-
 stars.forEach((star) =>{
-
+     
     star.addEventListener(`click`,() => {             //execute when click on any one star
         let reviewStar = star.getAttribute(`data-value`);
               review_Star(reviewStar);                 //pass the rating star to fuction for get value of selected star
@@ -21,6 +20,7 @@ stars.forEach((star) =>{
             stars[i].classList.add(`active`);           //highlight selected stars
         }
     });
+
 });
 
 addbtn.addEventListener(`click`,() => {
@@ -54,6 +54,7 @@ addbtn.addEventListener(`click`,() => {
                        paragraph.innerHTML = strUserReivew;
                        reviewDiv.appendChild(paragraph);
             }
+            starRating=undefined;
             userReview.value="";
             stars.forEach(e =>{
                 e.classList.remove(`active`);
