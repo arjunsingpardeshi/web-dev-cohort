@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id = "items"></ul>
+    <script> 
+        const item = document.getElementById(`items`);
+        console.log(item);
+        function rederToScreen(obj){
+            const products = obj.data.data;
+            console.log(products);
+                products.forEach(product => {   
+                    const li = document.createElement(`li`);
+                    li.innerText = product.title;
+                    item.appendChild(li);
+                });
+        }
+        fetch("https://api.freeapi.app/api/v1/public/randomproducts")
+        .then((response)  => response.json())  //resonse return promise
+        .then(rederToScreen)
+        .catch((err) => {console.log("error in fetching data is",err)})
+        .finally(()  =>{console.log("always execute")});
+    </script>
+    
+</body>
+</html>
